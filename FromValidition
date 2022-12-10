@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <input type="text" name="" id="name" placeholder="HolderName"><br><br>
+    <input type="number" name="" id="accountNo" placeholder="account Number"><br><br>
+    <input type="number" name="" id="conAccountNot" placeholder="Confirm Account Number"><br><br>
+    <input type="number" name="" id="CVV" placeholder="Enter CVV"><br><br>
+    <input type="password" name="" id="pass" placeholder="passWord"><br><br>
+    <input type="email" name="" id="email" placeholder="email"><br><br>
+    <input type="number" name="" id="amount" placeholder="enterEmount"><br><br>
+     <button onclick="clickMe()">Submit</button>
+    </div>
+</body>
+<script> 
+   function clickMe(){
+    let name=document.getElementById("name");
+    let number=document.getElementById("accountNo");
+    let CNumber=document.getElementById("conAccountNot");
+    let CVV=document.getElementById("CVV");
+    let pass=document.getElementById("pass").value;
+    let amount=document.getElementById("amount");
+    let email=document.getElementById("email").value;
+
+    if(name.value=="" || number.value=="" ||CVV.value=="" ||pass.value=="" ||amount.value==""){
+    alert("invalid values")
+    return false;
+   }else{
+           true;
+   }
+
+   if(number.value!=CNumber.value){
+    alert("please check confirm account Number")
+   }
+
+if(email.length<=10){
+    alert("check your email id")
+}
+
+if (amount.value>3000){
+    alert("due to balance")
+}
+if(pass.length<=8){
+    alert("alt")
+}
+ }
+</script>
+</html>
